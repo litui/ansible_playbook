@@ -1,5 +1,5 @@
-FROM gliderlabs/alpine:3.4
-ARG VERSION=2.7.2
+FROM gliderlabs/alpine:3.9
+ARG VERSION=2.8.0
 
 RUN \
   apk-install \
@@ -7,13 +7,14 @@ RUN \
     openssh-client \
     python \
     py-boto \
-    py-dateutil \
-    py-httplib2 \
-    py-jinja2 \
-    py-paramiko \
-    py-pip \
-    py-setuptools \
-    py-yaml \
+    py2-dateutil \
+    py2-httplib2 \
+    py2-jinja2 \
+    py2-paramiko \
+    py2-pip \
+    py2-setuptools \
+    py2-yaml \
+    py2-crypto \
     tar && \
   pip install --upgrade pip python-keyczar && \
   rm -rf /var/cache/apk/*
