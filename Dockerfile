@@ -15,6 +15,7 @@ RUN \
     py2-setuptools \
     py2-yaml \
     py2-crypto \
+    py2-cryptography \
     tar && \
   pip install --upgrade pip python-keyczar && \
   rm -rf /var/cache/apk/*
